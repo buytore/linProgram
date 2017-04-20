@@ -77,6 +77,6 @@ for month, factory in production:
         'Switch On': switch_on[(month, factory)].varValue
     }
     output.append(var_output)
-output_df = pd.DataFrame.from_records(output).sort_values(['Month', 'Factory'])
+output_df = pd.DataFrame.from_records(output).sort(['Month', 'Factory'])
 output_df.set_index(['Month', 'Factory'], inplace=True)
 print output_df
